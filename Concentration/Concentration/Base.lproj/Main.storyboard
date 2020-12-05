@@ -17,10 +17,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pkp-Sb-3Od">
-                                <rect key="frame" x="20" y="44" width="374" height="232"/>
+                                <rect key="frame" x="20" y="44" width="374" height="312"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="y5f-4X-bRM">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nf6-vf-Ogq">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m35-Za-4u6">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="72"/>
+                                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zsh-9g-XP2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKi-p6-wbY">
+                                                <rect key="frame" x="95.5" y="0.0" width="87.5" height="72"/>
+                                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQi-GD-krN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAr-pG-MHs">
+                                                <rect key="frame" x="191" y="0.0" width="87.5" height="72"/>
+                                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tC5-ne-Rae"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfG-Gz-Pg6">
+                                                <rect key="frame" x="286.5" y="0.0" width="87.5" height="72"/>
+                                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="16a-cR-ekt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="y5f-4X-bRM">
+                                        <rect key="frame" x="0.0" y="80" width="374" height="72"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-Xf-95p">
                                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="72"/>
@@ -57,7 +94,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jmo-65-WOn">
-                                        <rect key="frame" x="0.0" y="80" width="374" height="72"/>
+                                        <rect key="frame" x="0.0" y="160" width="374" height="72"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPb-iE-A4y">
                                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="72"/>
@@ -94,7 +131,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ULV-tP-i71">
-                                        <rect key="frame" x="0.0" y="160" width="374" height="72"/>
+                                        <rect key="frame" x="0.0" y="240" width="374" height="72"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hop-N2-SSg">
                                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="72"/>
@@ -132,26 +169,52 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7M-66-1m5">
-                                <rect key="frame" x="146" y="814" width="122.5" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-D1-UiS">
+                                <rect key="frame" x="94" y="694" width="226" height="66"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchNewGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="ji7-tp-0dp"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="BNb-oZ-dFR">
+                                <rect key="frame" x="55.5" y="789" width="303.5" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7M-66-1m5">
+                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjN-J8-DB0">
+                                        <rect key="frame" x="162.5" y="0.0" width="141" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O7M-66-1m5" secondAttribute="bottom" id="5jv-QU-D2f"/>
-                            <constraint firstItem="O7M-66-1m5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WbE-FH-aQU"/>
-                            <constraint firstItem="Pkp-Sb-3Od" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c5K-3C-Jfu"/>
-                            <constraint firstItem="O7M-66-1m5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Pkp-Sb-3Od" secondAttribute="bottom" constant="8" symbolic="YES" id="yKV-rN-Scr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pkp-Sb-3Od" secondAttribute="trailing" constant="20" id="yUj-LJ-wwJ"/>
-                            <constraint firstItem="Pkp-Sb-3Od" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zzd-qO-5qh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8MT-D1-UiS" secondAttribute="bottom" constant="102" id="1Ml-xr-0J0"/>
+                            <constraint firstItem="8MT-D1-UiS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ggc-Nj-RdK"/>
+                            <constraint firstItem="Pkp-Sb-3Od" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KoY-lj-osk"/>
+                            <constraint firstItem="Pkp-Sb-3Od" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RQZ-Mz-u8h"/>
+                            <constraint firstItem="BNb-oZ-dFR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8MT-D1-UiS" secondAttribute="bottom" constant="8" symbolic="YES" id="i72-it-zSW"/>
+                            <constraint firstItem="BNb-oZ-dFR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ix3-yM-KGI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pkp-Sb-3Od" secondAttribute="trailing" constant="20" id="mfK-Py-8dB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BNb-oZ-dFR" secondAttribute="bottom" constant="25" id="yWM-pU-nN8"/>
+                            <constraint firstItem="8MT-D1-UiS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Pkp-Sb-3Od" secondAttribute="bottom" constant="8" symbolic="YES" id="z7x-qc-DVc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="O7M-66-1m5" id="4a5-pr-vXQ"/>
+                        <outlet property="scoreLabel" destination="qjN-J8-DB0" id="Kgu-ib-YFJ"/>
                         <outletCollection property="cardButtons" destination="mgw-vM-Ums" collectionClass="NSMutableArray" id="M4e-El-f39"/>
                         <outletCollection property="cardButtons" destination="Xcc-Xf-95p" collectionClass="NSMutableArray" id="np9-mx-HOC"/>
                         <outletCollection property="cardButtons" destination="A9c-Xj-k30" collectionClass="NSMutableArray" id="OpX-LL-XYJ"/>
@@ -164,6 +227,10 @@
                         <outletCollection property="cardButtons" destination="hop-N2-SSg" collectionClass="NSMutableArray" id="Vex-ol-NQr"/>
                         <outletCollection property="cardButtons" destination="kP3-k0-XFh" collectionClass="NSMutableArray" id="G8m-fC-Nvo"/>
                         <outletCollection property="cardButtons" destination="mWf-fc-Q45" collectionClass="NSMutableArray" id="Xk3-si-5ZJ"/>
+                        <outletCollection property="cardButtons" destination="m35-Za-4u6" collectionClass="NSMutableArray" id="Bes-4q-TWd"/>
+                        <outletCollection property="cardButtons" destination="fAr-pG-MHs" collectionClass="NSMutableArray" id="VK9-Vo-8aT"/>
+                        <outletCollection property="cardButtons" destination="MfG-Gz-Pg6" collectionClass="NSMutableArray" id="r11-rE-dv2"/>
+                        <outletCollection property="cardButtons" destination="VKi-p6-wbY" collectionClass="NSMutableArray" id="ekc-5O-ndW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

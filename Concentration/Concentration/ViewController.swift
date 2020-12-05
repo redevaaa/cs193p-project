@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
         flipCountLabel.attributedText = attributedString
     }
+    
+    
 
     @IBOutlet private weak var flipCountLabel: UILabel! {
         didSet{
@@ -39,6 +41,10 @@ class ViewController: UIViewController {
     
     @IBOutlet private var cardButtons: [UIButton]!
     
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
     @IBAction private func touchCard(_ sender: UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.firstIndex(of: sender){
@@ -47,6 +53,25 @@ class ViewController: UIViewController {
         }else{
             print("chosen card was not in cardButtons ")
         }
+    }
+    
+
+    @IBAction func touchNewGame() {
+        startNewGame()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        startNewGame()
+    }
+    
+    private func startNewGame() {
+        let emojiThemesKey = Array(emojiThemes.keys)
+        emojiChoices = emojiThemes[emojiThemesKey[emojiThemesKey.count.randomNumber]]!
+        emoji = [Card: String]()
+        flipCount = 0
+        game = Concentration(numberOfParisOfCards: numberOfPairsOfCards)
+        updateViewFromModel()
     }
     
     private func updateViewFromModel() {
@@ -63,14 +88,23 @@ class ViewController: UIViewController {
         }
     }
     
-//    private var emojiChoices = ["🦇","😱","🙀","😈","🎃","👻","🍭","🍬","🍎"]
-    var emojiChoices = "🦇😱🙀😈🎃👻🍭🍬🍎"
+    lazy private var emojiChoices = ["🦇","😱","🙀","😈","🎃","👻","🍭","🍬","🍎"]
+    private var emojiThemes = [
+        "fruits":["🥑", "🍍", "🍆", "🍠", "🍉", "🍇", "🥝", "🍒"],
+        "animals":["🦊", "🐼", "🦁", "🐘", "🐓", "🦀", "🐷", "🦉"],
+        "loves": ["❤️","🧡","💛","💚","💙","💜","🤎","🖤"],
+        "faces": ["😀", "🤪", "😬", "😭", "😎", "😍", "🤠", "😇"],
+        "people": ["👮🏻‍♂️", "👩‍💻", "👨🏾‍🌾", "🧟‍♀️", "👩🏽‍🎨", "👩🏼‍🍳", "🧕🏼", "💆‍♂️"],
+        "transport": ["🚗", "🚓", "🚚", "🏍", "✈️", "🚜", "🚎", "🚲"],
+    ]
+    
+    
     private var emoji = [Card: String]()
     
     private func emoji(for card: Card) -> String {
         if emoji[card] == nil, emojiChoices.count > 0{
-            let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.randomNumber)
-            emoji[card] = String(emojiChoices.remove(at: randomStringIndex))
+            let randomStringIndex =  emojiChoices.count.randomNumber
+            emoji[card] = emojiChoices.remove(at: randomStringIndex)
         }
         return emoji[card] ?? "?"
     }

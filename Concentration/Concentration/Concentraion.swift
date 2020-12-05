@@ -22,7 +22,7 @@ class Concentration
         }
     }
     
-    func chooseCard(at index: Int){
+    func chooseCard(at index: Int) {
         assert(cards.indices.contains(index),"Concentraion.chooseCard(at: \(index)): chosen index not in the cards")
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
@@ -38,14 +38,15 @@ class Concentration
             }
         }
     }
-    
-    init(numberOfParisOfCards: Int){
+        
+    init(numberOfParisOfCards: Int) {
         assert(numberOfParisOfCards > 0, "Concentraion.init(\(numberOfParisOfCards): you must have at least one pair of cars ")
         for _ in 1...numberOfParisOfCards{
             let card = Card()
             cards += [card, card]
         }
         // TODO: Shuffle the cards
+        cards.shuffle()
     }
 }
 
