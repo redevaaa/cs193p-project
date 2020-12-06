@@ -15,22 +15,23 @@ class ViewController: UIViewController {
         return (cardButtons.count + 1) / 2
     }
     
-    private(set) var flipCount = 0 {
-        didSet {
-            updateFlipCountLabel()
-        }
-    }
-    
     func updateFlipCountLabel(){
         let attributes: [NSAttributedString.Key: Any] = [
-            .strokeColor : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)  ,
+            .strokeColor : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1) ,
             .strokeWidth : 2,
-            
         ]
-        let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
+        let attributedString = NSAttributedString(string: "Flips: \(game.flipCount)", attributes: attributes)
         flipCountLabel.attributedText = attributedString
     }
     
+    func updateScoreLabel(){
+        let attributes: [NSAttributedString.Key: Any] = [
+            .strokeColor : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)  ,
+            .strokeWidth : 2,
+        ]
+        let attributedString = NSAttributedString(string: "Scores: \(game.score)", attributes: attributes)
+        scoreLabel.attributedText = attributedString
+    }
     
 
     @IBOutlet private weak var flipCountLabel: UILabel! {
@@ -42,11 +43,14 @@ class ViewController: UIViewController {
     @IBOutlet private var cardButtons: [UIButton]!
     
     
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel! {
+        didSet {
+            updateScoreLabel()
+        }
+    }
     
     
     @IBAction private func touchCard(_ sender: UIButton) {
-        flipCount += 1
         if let cardNumber = cardButtons.firstIndex(of: sender){
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
@@ -69,12 +73,13 @@ class ViewController: UIViewController {
         let emojiThemesKey = Array(emojiThemes.keys)
         emojiChoices = emojiThemes[emojiThemesKey[emojiThemesKey.count.randomNumber]]!
         emoji = [Card: String]()
-        flipCount = 0
         game = Concentration(numberOfParisOfCards: numberOfPairsOfCards)
         updateViewFromModel()
     }
     
     private func updateViewFromModel() {
+        updateFlipCountLabel()
+        updateScoreLabel()
         for index in cardButtons.indices {
             let button = cardButtons[index]
             let card = game.cards[index]

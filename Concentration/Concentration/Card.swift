@@ -18,6 +18,8 @@ struct Card: Hashable {
     var isMatched = false
     private var identifier: Int
     
+    var hasBeenFlippedAtLeastOne = false
+    
     private static var identifierFactory = 0
     
     private static func getUniqueIdentifier() -> Int {
